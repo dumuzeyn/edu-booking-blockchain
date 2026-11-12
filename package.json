@@ -1,0 +1,24 @@
+{
+  "name": "edu-booking-blockchain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local educational consultation booking with ERC-20 EDU escrow",
+  "scripts": {
+    "chain": "ganache --server.host 127.0.0.1 --server.port 7545 --chain.chainId 1337 --chain.networkId 5777 --database.dbPath .ganache-db --wallet.deterministic",
+    "compile": "truffle compile --all",
+    "migrate": "truffle migrate --network development --reset",
+    "demo": "node scripts/demo.cjs",
+    "test": "node --test test/booking.test.cjs",
+    "start": "node scripts/server.cjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.1.0",
+    "ethers": "6.15.0"
+  },
+  "devDependencies": {
+    "ganache": "7.9.2",
+    "solc": "0.8.26",
+    "truffle": "5.11.5"
+  },
+  "engines": { "node": ">=20" }
+}

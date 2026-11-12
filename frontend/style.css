@@ -1,0 +1,373 @@
+:root {
+  color-scheme: light;
+  font:
+    14px/1.5 "Segoe UI",
+    Arial,
+    sans-serif;
+  color: #243045;
+  background: #f5f7fa;
+  --border: #e0e5ec;
+  --muted: #69758a;
+  --blue: #315fbd;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px 24px;
+}
+header {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  font-size: 19px;
+  font-weight: 650;
+  color: #253d69;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  gap: 26px;
+}
+nav a {
+  color: #56637a;
+  text-decoration: none;
+  font-size: 13px;
+}
+nav a:hover {
+  color: var(--blue);
+}
+.page-title {
+  margin: 27px 0 23px;
+}
+h1 {
+  margin: 0 0 4px;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+.page-title p {
+  margin: 0;
+  color: var(--muted);
+}
+h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+.panel {
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px #26344a04;
+}
+.account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.account-details {
+  display: grid;
+  grid-template-columns: auto 180px;
+  gap: 8px 14px;
+  align-items: center;
+}
+.account-details label {
+  color: var(--muted);
+  font-size: 13px;
+}
+.account-details code {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.account-balance {
+  text-align: right;
+}
+.account-balance > span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.account-balance strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+}
+.account-balance b {
+  font-weight: inherit;
+}
+.account-balance small {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.stats > div {
+  padding: 13px 17px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.stats span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.stats strong {
+  font-size: 17px;
+  font-weight: 600;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+button,
+select,
+input {
+  font: inherit;
+}
+select,
+input {
+  padding: 8px 10px;
+  border: 1px solid #ccd4df;
+  border-radius: 6px;
+  background: #fff;
+  color: #243045;
+}
+button {
+  padding: 8px 13px;
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  background: var(--blue);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+button:hover {
+  background: #274f9e;
+  border-color: #274f9e;
+}
+button.secondary {
+  background: #fff;
+  border-color: #d5dce6;
+  color: #455570;
+}
+button.secondary:hover {
+  background: #f3f6fb;
+  border-color: #b9c7db;
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid #7296df;
+  outline-offset: 3px;
+}
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 12px 13px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #e9edf3;
+}
+th {
+  background: #f8f9fc;
+  color: #647188;
+  font-size: 12px;
+  font-weight: 600;
+}
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+tbody tr:hover {
+  background: #fcfdff;
+}
+td {
+  font-size: 13px;
+}
+td:first-child {
+  width: 43px;
+  color: var(--muted);
+}
+td:nth-child(3) {
+  white-space: nowrap;
+  font-weight: 600;
+}
+td:last-child {
+  width: 235px;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.buttons button {
+  padding: 6px 10px;
+  font-size: 12px;
+}
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.status-0 {
+  color: #305b9f;
+  background: #edf3ff;
+}
+.status-1 {
+  color: #89651e;
+  background: #fff6df;
+}
+.status-2 {
+  color: #35704e;
+  background: #ebf5ee;
+}
+.status-3 {
+  color: #758094;
+  background: #f0f2f5;
+}
+.empty {
+  color: #a3adbc;
+}
+#create h2 {
+  margin-bottom: 14px;
+}
+form {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+}
+#message {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+#message.error {
+  color: #aa4242;
+}
+.operation {
+  padding: 11px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+.operation:last-child {
+  border-bottom: 0;
+}
+.operation b {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.operation code {
+  font-size: 11px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+footer {
+  padding-top: 4px;
+  font-size: 12px;
+  color: #8a95a6;
+}
+@media (max-width: 650px) {
+  main {
+    padding: 0 14px 20px;
+  }
+  header {
+    min-height: 65px;
+  }
+  nav {
+    gap: 15px;
+  }
+  nav a {
+    font-size: 12px;
+  }
+  .brand {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  .page-title {
+    margin: 23px 0 18px;
+  }
+  .panel {
+    padding: 16px;
+  }
+  .account {
+    flex-wrap: wrap;
+  }
+  .account-details {
+    grid-template-columns: auto 170px;
+    max-width: 100%;
+  }
+  .account-balance {
+    text-align: left;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .stats > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .stats span {
+    margin: 0;
+  }
+  .stats strong {
+    font-size: 15px;
+  }
+  form label,
+  form input {
+    width: 100%;
+  }
+}

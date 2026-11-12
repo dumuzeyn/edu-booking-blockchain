@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "flows": [
+    "read real EVM balances",
+    "tutor creates slot",
+    "student approves and books 75 EDU",
+    "student cancels and receives 75 EDU",
+    "mobile without horizontal overflow"
+  ],
+  "operations": [
+    "Отмена с возвратом · блок 360xa1a3c423ce95e60b149b0ea1e46dc6fca62d81253bed6feead28be717b54786c",
+    "Бронирование №8 · блок 350x774d6cf7ac1a0032082daaa2c043a21456a3c9cdbe7cee44bd90a41d47fc2085",
+    "Разрешение на 75 EDU · блок 340x69a96eab8d283b9f63a82a1ff30c80eeec2b0e432e97c9f6e382c53219717b4f",
+    "Создание консультации · блок 330xca29ced8d5efee116315750416d9c377af35f7ec0c80fbcacb4986acbdc5b5f4"
+  ],
+  "errors": [],
+  "overflow": false
+}

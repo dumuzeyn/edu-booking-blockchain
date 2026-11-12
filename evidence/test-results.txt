@@ -1,0 +1,26 @@
+✔ Fixed initial supply and ERC20 transfer including zero value (744.5839ms)
+✔ Burn reduces holder balance and total supply (483.2138ms)
+✔ Only tutor creates valid future nonzero-priced slots (406.8123ms)
+✔ Unknown slot is rejected in all lifecycle methods (440.3248ms)
+✔ Missing allowance rolls back booking state and balances (439.94ms)
+✔ Insufficient balance rolls back booking despite approval (531.7491ms)
+✔ Booking consumes exact allowance and holds escrow with Booked event (621.9911ms)
+✔ Double booking and tutor self-booking are forbidden (691.239ms)
+✔ Student cancellation refunds full escrow exactly once (888.1161ms)
+✔ Other student cannot cancel or confirm another booking (636.4856ms)
+✔ Tutor cancellation refunds student and cannot redirect payment (918.5934ms)
+✔ Tutor may cancel an unbooked slot without payment (572.0911ms)
+✔ Completion requires start and student confirmation then pays tutor once (1028.3992ms)
+✔ Student cannot cancel or newly book a started slot (855.6586ms)
+✔ Expired escrow returns to student with permissionless trigger (885.8582ms)
+✔ Boundary at start closes cancellation and allows confirmation (633.5765ms)
+✔ Boundary at refund deadline forbids completion and allows refund (713.4564ms)
+✔ Constructors reject zero treasury and invalid booking dependencies (487.2957ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12451.0597

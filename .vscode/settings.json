@@ -1,0 +1,6 @@
+{
+  "solidity.compileUsingLocalVersion": "${workspaceFolder}/node_modules/solc/soljson.js",
+  "solidity.packageDefaultDependenciesDirectory": "node_modules",
+  "solidity.packageDefaultDependenciesContractsDirectory": "",
+  "files.exclude": {"**/node_modules": true, "**/.ganache-db": true}
+}

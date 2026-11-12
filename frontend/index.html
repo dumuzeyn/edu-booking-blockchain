@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EDU Booking</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="/">EDU Booking</a>
+        <nav aria-label="Разделы">
+          <a href="#schedule">Консультации</a><a href="#operations">Операции</a>
+        </nav>
+      </header>
+      <div class="page-title">
+        <h1>Бронирование консультаций</h1>
+        <p>Расписание и расчёты в EDU</p>
+      </div>
+      <section class="account panel">
+        <div class="account-details">
+          <label for="role">Аккаунт</label>
+          <select id="role">
+            <option value="student">Студент</option>
+            <option value="otherStudent">Другой студент</option>
+            <option value="tutor">Преподаватель</option>
+            <option value="treasury">Казначейство</option>
+          </select>
+          <code id="address">Подключение…</code>
+        </div>
+        <div class="account-balance">
+          <span>Доступный баланс</span
+          ><strong><b id="balance">—</b> <small>EDU</small></strong>
+        </div>
+      </section>
+      <div class="stats">
+        <div><span>В эскроу</span><strong id="escrow">— EDU</strong></div>
+        <div>
+          <span>Баланс преподавателя</span
+          ><strong id="tutorBalance">— EDU</strong>
+        </div>
+        <div>
+          <span>Предложение токена</span><strong id="supply">— EDU</strong>
+        </div>
+      </div>
+      <section class="panel schedule" id="schedule">
+        <div class="section-title">
+          <h2>Консультации</h2>
+          <button id="refresh" class="secondary">Обновить</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>№</th>
+                <th>Дата и время</th>
+                <th>Цена</th>
+                <th>Статус</th>
+                <th>Действие</th>
+              </tr>
+            </thead>
+            <tbody id="slots"></tbody>
+          </table>
+        </div>
+      </section>
+      <section id="create" class="panel" hidden>
+        <h2>Добавить консультацию</h2>
+        <form id="create-form">
+          <label
+            >Дата и время<input
+              id="start"
+              type="datetime-local"
+              required /></label
+          ><label
+            >Стоимость в EDU<input
+              id="price"
+              type="number"
+              value="100"
+              min="0.000001"
+              step="0.000001"
+              required /></label
+          ><button type="submit">Создать слот</button>
+        </form>
+      </section>
+      <section class="panel" id="operations">
+        <h2>Журнал операций</h2>
+        <p id="message" role="status">Загрузка данных из блокчейна…</p>
+        <div id="activity"></div>
+      </section>
+      <footer>EDU Booking · Оплата консультаций в EDU</footer>
+    </main>
+    <script src="/ethers.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

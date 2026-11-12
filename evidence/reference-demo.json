@@ -1,0 +1,265 @@
+{
+  "runAt": "2026-11-12T12:55:28.679Z",
+  "environment": "Ganache local EVM only",
+  "chainId": 1337,
+  "networkId": "5777",
+  "token": "0x4D7babC8867a5D66A9131d894B850A517fDC7618",
+  "booking": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+  "treasury": "0xa80e5A5b8C9D86Da0CF8452bC372B44Dc2FDBd53",
+  "tutor": "0x7F4afCb3d9dD888d6f8327C92f1c9f48BBffC8c9",
+  "student": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+  "otherStudent": "0x4D38853e9fC285979C9ECA1AE7cE4FF96E67C55b",
+  "refundDelay": 86400,
+  "receipts": [
+    {
+      "action": "approve 100 EDU",
+      "hash": "0x9fe89c36cd7d325e06f6af7a516ffdf4f43c6b1d34d75025f3099cf35bf51182",
+      "block": 7,
+      "status": 1,
+      "gasUsed": "46383",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x4D7babC8867a5D66A9131d894B850A517fDC7618",
+      "input": "0x095ea7b300000000000000000000000082dda189639cbb54ee57374ed38e8db0a6bb1cd90000000000000000000000000000000000000000000000056bc75e2d63100000",
+      "events": [
+        {
+          "name": "Approval",
+          "args": [
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "100000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "book slot 0 for 100 EDU",
+      "hash": "0x34e41feaf9691e97a49349375d7f0e30fd8c9ad4e84dff30610887bbcd0a9d1c",
+      "block": 8,
+      "status": 1,
+      "gasUsed": "86540",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+      "input": "0x1116fd040000000000000000000000000000000000000000000000000000000000000000",
+      "events": [
+        {
+          "name": "Transfer",
+          "args": [
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "100000000000000000000"
+          ]
+        },
+        {
+          "name": "Booked",
+          "args": [
+            "0",
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "100000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "approve 150 EDU",
+      "hash": "0x822f7c7223bb7201142d501d32b11e5ea1f4092223e10a8b56d69e4c72ddd4a1",
+      "block": 9,
+      "status": 1,
+      "gasUsed": "46383",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x4D7babC8867a5D66A9131d894B850A517fDC7618",
+      "input": "0x095ea7b300000000000000000000000082dda189639cbb54ee57374ed38e8db0a6bb1cd900000000000000000000000000000000000000000000000821ab0d4414980000",
+      "events": [
+        {
+          "name": "Approval",
+          "args": [
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "150000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "book slot 1 for 150 EDU",
+      "hash": "0xb1d4710df792efac296ce983b9522afd0a4dc383da72d96d464c7124f26695b8",
+      "block": 10,
+      "status": 1,
+      "gasUsed": "69452",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+      "input": "0x1116fd040000000000000000000000000000000000000000000000000000000000000001",
+      "events": [
+        {
+          "name": "Transfer",
+          "args": [
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "150000000000000000000"
+          ]
+        },
+        {
+          "name": "Booked",
+          "args": [
+            "1",
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "150000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "cancel slot 1 and refund 150 EDU",
+      "hash": "0xe1feda8049459f2ac0783abaaf6a57ec2897889a8ca169b8d7cecb74975f1987",
+      "block": 11,
+      "status": 1,
+      "gasUsed": "51830",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+      "input": "0xa6de402d0000000000000000000000000000000000000000000000000000000000000001",
+      "events": [
+        {
+          "name": "Transfer",
+          "args": [
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "150000000000000000000"
+          ]
+        },
+        {
+          "name": "Cancelled",
+          "args": [
+            "1",
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "150000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "create slot 2 for 50 EDU",
+      "hash": "0x6d6daa40aec624b15e7ae59a654b75ae9f0f973c3b4962a5ba385853ab131896",
+      "block": 12,
+      "status": 1,
+      "gasUsed": "53674",
+      "from": "0x7F4afCb3d9dD888d6f8327C92f1c9f48BBffC8c9",
+      "to": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+      "input": "0xd4b1792d000000000000000000000000000000000000000000000000000000006af5b77b000000000000000000000000000000000000000000000002b5e3af16b1880000",
+      "events": [
+        {
+          "name": "SlotCreated",
+          "args": [
+            "2",
+            "1794488187",
+            "50000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "approve 50 EDU",
+      "hash": "0x88b92f6d49b5acb24bc9b547c933406f0c6509993e2dfee9e6c91fe19fb53cce",
+      "block": 13,
+      "status": 1,
+      "gasUsed": "46383",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x4D7babC8867a5D66A9131d894B850A517fDC7618",
+      "input": "0x095ea7b300000000000000000000000082dda189639cbb54ee57374ed38e8db0a6bb1cd9000000000000000000000000000000000000000000000002b5e3af16b1880000",
+      "events": [
+        {
+          "name": "Approval",
+          "args": [
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "50000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "book slot 2 for 50 EDU",
+      "hash": "0x5d5fe5d8554b726b4d6b3e283f5c973b81aa33b3013961222fc73e3b4418cda8",
+      "block": 14,
+      "status": 1,
+      "gasUsed": "69452",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+      "input": "0x1116fd040000000000000000000000000000000000000000000000000000000000000002",
+      "events": [
+        {
+          "name": "Transfer",
+          "args": [
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "50000000000000000000"
+          ]
+        },
+        {
+          "name": "Booked",
+          "args": [
+            "2",
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "50000000000000000000"
+          ]
+        }
+      ]
+    },
+    {
+      "action": "confirm slot 2 and pay tutor 50 EDU",
+      "hash": "0xe5be185ecc6a1843747b13590de325c9bfb435a08520aed4fc5a7ec454db80b5",
+      "block": 16,
+      "status": 1,
+      "gasUsed": "68882",
+      "from": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "to": "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+      "input": "0x767ac9ba0000000000000000000000000000000000000000000000000000000000000002",
+      "events": [
+        {
+          "name": "Transfer",
+          "args": [
+            "0x82DDa189639cbb54ee57374ED38e8DB0A6bb1CD9",
+            "0x7F4afCb3d9dD888d6f8327C92f1c9f48BBffC8c9",
+            "50000000000000000000"
+          ]
+        },
+        {
+          "name": "Completed",
+          "args": [
+            "2",
+            "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+            "50000000000000000000"
+          ]
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "id": 0,
+      "startsAt": "1794574517",
+      "price": "100.0",
+      "student": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "status": 1
+    },
+    {
+      "id": 1,
+      "startsAt": "1794578117",
+      "price": "150.0",
+      "student": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "status": 3
+    },
+    {
+      "id": 2,
+      "startsAt": "1794488187",
+      "price": "50.0",
+      "student": "0x0e380c696f22A57FCa9e010507B6a7397c94d621",
+      "status": 2
+    }
+  ],
+  "balances": {
+    "student": "850.0",
+    "tutor": "50.0",
+    "escrow": "100.0"
+  },
+  "totalSupply": "1000000.0",
+  "note": "evm_increaseTime used only for the local demonstration"
+}

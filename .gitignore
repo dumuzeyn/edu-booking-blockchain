@@ -1,0 +1,9 @@
+node_modules/
+build/
+.ganache-db/
+deployments/local.json
+evidence/latest-demo.json
+evidence/test-results.tap
+.env
+*.log
+.DS_Store
