@@ -152,6 +152,8 @@ textarea { font: inherit; padding: 8px 10px; border: 1px solid #ccd4df; border-r
 .place-field { flex: 1 1 300px; }
 .meeting-place { min-width: 160px; max-width: 280px; }
 .meeting-place p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.meeting-place a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+.meeting-place a:hover { color: #274f9e; }
 .meeting-place span { color: var(--muted); font-size: 12px; }
 #meeting-editor h2 { margin-bottom: 14px; }
 select,

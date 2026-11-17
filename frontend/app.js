@@ -12,6 +12,31 @@ const fmt = (v) =>
   });
 const names = ["Открыта", "Забронирована", "Завершена", "Отменена"];
 const revealedMeetings = new Map();
+function renderMeetingText(value) {
+  const paragraph = document.createElement("p");
+  const links = /https?:\/\/[^\s<>"']+|(?<![@\w.-])(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}(?::\d{1,5})?(?:[/?#][^\s<>"']*)?/gi;
+  let offset = 0;
+  for (const match of value.matchAll(links)) {
+    let label = match[0].replace(/[.,;:!?…»]+$/, "");
+    while (label.endsWith(")") &&
+      (label.match(/\)/g) || []).length > (label.match(/\(/g) || []).length)
+      label = label.slice(0, -1);
+    let url;
+    try { url = new URL(/^https?:\/\//i.test(label) ? label : "https://" + label); }
+    catch { continue; }
+    if (!["http:", "https:"].includes(url.protocol)) continue;
+    paragraph.append(document.createTextNode(value.slice(offset, match.index)));
+    const link = document.createElement("a");
+    link.href = url.href;
+    link.textContent = label;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    paragraph.append(link);
+    offset = match.index + label.length;
+  }
+  paragraph.append(document.createTextNode(value.slice(offset)));
+  return paragraph;
+}
 let editingMeetingId = null;
 async function api(path, payload) {
   const response = await fetch(path, payload === undefined ? undefined : {
@@ -87,7 +112,7 @@ async function refresh() {
     if (meetingInfo.configured.includes(id) && canReadMeeting) {
       const savedText = revealedMeetings.get(address.toLowerCase() + ":" + id);
       if (savedText !== undefined) {
-        const text = document.createElement("p"); text.textContent = savedText; place.append(text);
+        place.append(renderMeetingText(savedText));
       } else {
         const show = document.createElement("button"); show.className = "secondary";
         show.textContent = "Показать место"; show.disabled = busy;
