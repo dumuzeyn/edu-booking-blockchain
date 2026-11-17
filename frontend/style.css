@@ -148,6 +148,12 @@ select,
 input {
   font: inherit;
 }
+textarea { font: inherit; padding: 8px 10px; border: 1px solid #ccd4df; border-radius: 6px; resize: vertical; color: #243045; }
+.place-field { flex: 1 1 300px; }
+.meeting-place { min-width: 160px; max-width: 280px; }
+.meeting-place p { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.meeting-place span { color: var(--muted); font-size: 12px; }
+#meeting-editor h2 { margin-bottom: 14px; }
 select,
 input {
   padding: 8px 10px;
@@ -197,7 +203,7 @@ a:focus-visible {
 }
 table {
   width: 100%;
-  min-width: 640px;
+  min-width: 850px;
   border-collapse: collapse;
 }
 th,
